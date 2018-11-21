@@ -1,0 +1,6 @@
+[package]
+name = "adventurestothethird"
+version = "0.1.0"
+authors = ["Rasmus Rosengren <rsrp98@gmail.com>"]
+
+[dependencies]
