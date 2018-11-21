@@ -5,39 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "lldb",
+            "name": "(Windows) Launch",
+            "type": "cppvsdbg",
             "request": "launch",
-            "name": "Debug executable 'adventurestothethird'",
-            "cargo": {
-                "args": [
-                    "build",
-                    "--bin=adventurestothethird",
-                    "--package=adventurestothethird"
-                ],
-                "filter": {
-                    "kind": "bin"
-                }
-            },
+            "program": "${workspaceFolder}/target/debug/adventurestothethird.exe",
             "args": [],
-            "cwd": "${workspaceFolder}"
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "preLaunchTask": "cargo build"
         },
-        {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Debug unit tests in executable 'adventurestothethird'",
-            "cargo": {
-                "args": [
-                    "test",
-                    "--no-run",
-                    "--bin=adventurestothethird",
-                    "--package=adventurestothethird"
-                ],
-                "filter": {
-                    "kind": "bin"
-                }
-            },
-            "args": [],
-            "cwd": "${workspaceFolder}"
-        }
     ]
 }
