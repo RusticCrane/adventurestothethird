@@ -297,12 +297,12 @@ fn main() {
     // Shader modules are needed to create a pipeline definition.
     // The shader is loaded from SPIR-V binary files.
     let vertex_shader_module = {
-        let spirv = include_bytes!("part00.vert");
+        let spirv = include_bytes!("../res/shaders/compiled/part00.vert.spv");
         device.create_shader_module(spirv).unwrap()
     };
 
     let fragment_shader_module = {
-        let spirv = include_bytes!("part00.frag");
+        let spirv = include_bytes!("../res/shaders/compiled/part00.frag.spv");
         device.create_shader_module(spirv).unwrap()
     };
 
